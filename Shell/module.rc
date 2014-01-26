@@ -1,0 +1,55 @@
+#!/bin/sh
+#start up plex script for module
+
+module_name=$2
+
+PATH=/raid/data/module/Python2/system/bin:/raid/data/module/ModBase1/system/bin:$PATH
+export PATH
+
+LD_LIBRARY_PATH=/raid/data/module/ModBase1/system/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+
+export GIT_SSL_NO_VERIFY=true
+
+INSTALL_DIR=/raid/data/module/HTPCManager/bin
+HTPCMANAGER="${INSTALL_DIR}/Htpc.py"
+mkdir -p "${INSTALL_DIR}/var"
+PID_FILE="${INSTALL_DIR}/var/htpcmanager.pid"
+mkdir -p "${INSTALL_DIR}/Data"
+DATA_DIR="${INSTALL_DIR}/Data"
+
+
+#Function
+start(){
+  echo "HTPC Manager start"
+
+cd /raid/data/module/HTPCManager/bin
+/raid/data/module/Python2/system/bin/python ${HTPCMANAGER} --daemon --pid ${PID_FILE} --port 8089 --datadir ${DATA_DIR}
+
+
+}
+
+stop(){
+  echo "HTPC Manager stop"
+
+    kill `cat ${PID_FILE}`
+    rm -f ${PID_FILE}
+
+}
+
+#Switch Case
+case "$1" in
+  boot)
+    start
+    ;;
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  *)
+    echo "Usage: $module_name {boot|start|stop}"
+    exit 1
+    ;;
+esac

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:md="http://localhost/module/schema#"
+         	  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+   	<md:Install>
+   	<md:ModuleRDF>Install</md:ModuleRDF>
+   	<md:ModuleRDFVer>1.0.1</md:ModuleRDFVer>
+    <md:Version>1.0.2</md:Version>
+    <md:Name>HTPC Manager</md:Name>
+    <md:Description>Manage all your favorite software on your HTPC</md:Description>
+    <md:Key>HTPCManager</md:Key>
+    <md:Authors>gilbert brian</md:Authors>
+    <md:Thanks></md:Thanks>
+    <md:WebUrl></md:WebUrl>
+    <md:UpdateUrl></md:UpdateUrl>
+    <md:Reboot>No</md:Reboot>
+    <md:HomePage>www/index.htm</md:HomePage>
+    <md:MacStart></md:MacStart>
+    <md:MacEnd></md:MacEnd>
+    <md:Show>1</md:Show>
+    <md:Publish>1</md:Publish>
+    <md:Login>1</md:Login>
+    <md:Icon>logo.png</md:Icon>
+    <md:Mode>User</md:Mode>
+    <md:UI>User</md:UI>
+   </md:Install>
+<md:NAS>
+        <md:TargetNas>Thecus</md:TargetNas>
+        <md:NasType>N3200PRO</md:NasType>
+        <md:NasProtol>N3200PRO</md:NasProtol>
+        <md:NasVersion>1.00.01</md:NasVersion>
+    </md:NAS>
+
+    <md:NAS>
+        <md:TargetNas>Thecus</md:TargetNas>
+        <md:NasType>M3800</md:NasType>
+        <md:NasProtol>M3800</md:NasProtol>
+        <md:NasVersion>1.00.01</md:NasVersion>
+    </md:NAS>
+
+    <md:NAS>
+        <md:TargetNas>Thecus</md:TargetNas>
+        <md:NasType>n5200</md:NasType>
+        <md:NasProtol>N5200</md:NasProtol>
+        <md:NasVersion>2.00.00</md:NasVersion>
+    </md:NAS>
+
+    <md:NAS>
+        <md:TargetNas>Thecus</md:TargetNas>
+        <md:NasType>n7700</md:NasType>
+        <md:NasProtol>N7700</md:NasProtol>
+        <md:NasVersion>2.00.00</md:NasVersion>
+    </md:NAS>
+
+    <md:NAS>
+        <md:TargetNas>Thecus</md:TargetNas>
+        <md:NasType>n4100pro</md:NasType>
+        <md:NasProtol>N4100PRO</md:NasProtol>
+        <md:NasVersion>2.00.00</md:NasVersion>
+    </md:NAS>
+
+    <md:NAS>
+        <md:TargetNas>Thecus</md:TargetNas>
+        <md:NasType>N12000</md:NasType>
+        <md:NasProtol>N12000</md:NasProtol>
+        <md:NasVersion>1.00.00</md:NasVersion>
+    </md:NAS>
+
+    <md:NAS>
+        <md:TargetNas>Thecus</md:TargetNas>
+        <md:NasType>N16000</md:NasType>
+        <md:NasProtol>N16000</md:NasProtol>
+        <md:NasVersion>1.00.00</md:NasVersion>
+    </md:NAS>
+    <md:NAS>
+        <md:TargetNas>Thecus</md:TargetNas>
+        <md:NasType>N2520</md:NasType>
+        <md:NasProtol>N2520</md:NasProtol>
+        <md:NasVersion>OS6.build_81</md:NasVersion>
+    </md:NAS>
+    <md:DependCom>
+        <md:DependName>ModBase1</md:DependName>
+        <md:DependVer>1.00.00</md:DependVer>
+        <md:DependUrl>http://www.fajo.de/main/thecus/modules/modbase1</md:DependUrl>
+    </md:DependCom>
+    <md:DependCom>
+        <md:DependName>Python2</md:DependName>
+        <md:DependVer>2.00.01</md:DependVer>
+        <md:DependUrl>http://www.fajo.de/main/en/thecus/modules/python2</md:DependUrl>
+    </md:DependCom>
+</rdf:RDF>
